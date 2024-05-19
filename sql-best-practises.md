@@ -53,29 +53,52 @@ FROM
 ```
 SELECT * FROM customers;
 ```
-
-## 3. Use EXISTS() Instead of COUNT()
+## 3. CTE Over Sub-query
 
 - **Best Practice**
 
-  Use EXISTS for checking the existence of rows, which is generally faster than using COUNT(*).
+  Use Common Table Expressions (CTEs) to make complex queries more readable and maintainable instead of using sub-queries.
 
 - **Good Example**
 
 ```
-IF EXISTS (SELECT 1 FROM customers WHERE customer_id = 1)
-BEGIN
-    PRINT 'Customer exists';
-END;
+WITH OrderTotals AS (
+    SELECT 
+        customer_id,
+        SUM(order_amount) AS total_amount
+    FROM 
+        orders
+    GROUP BY 
+        customer_id
+)
+SELECT 
+    c.customer_id,
+    c.first_name,
+    ot.total_amount
+FROM 
+    customers c
+JOIN 
+    OrderTotals ot ON c.customer_id = ot.customer_id;
 ```
+
 - **Bad Example**
 
 ```
-IF (SELECT COUNT(*) FROM customers WHERE customer_id = 1) > 0
-BEGIN
-    PRINT 'Customer exists';
-END;
+SELECT 
+    c.customer_id,
+    c.first_name,
+    (
+        SELECT 
+            SUM(o.order_amount)
+        FROM 
+            orders o
+        WHERE 
+            o.customer_id = c.customer_id
+    ) AS total_amount
+FROM 
+    customers c;
 ```
+
 
 ## 4. Early Filter Where Possible
 
@@ -224,50 +247,27 @@ JOIN
     customers c ON o.customer_email = c.customer_email;
 ```
 
-## 8. CTE Over Sub-query
+## 8. Use EXISTS() Instead of COUNT()
 
 - **Best Practice**
 
-  Use Common Table Expressions (CTEs) to make complex queries more readable and maintainable instead of using sub-queries.
+  Use EXISTS for checking the existence of rows, which is generally faster than using COUNT(*).
 
 - **Good Example**
 
 ```
-WITH OrderTotals AS (
-    SELECT 
-        customer_id,
-        SUM(order_amount) AS total_amount
-    FROM 
-        orders
-    GROUP BY 
-        customer_id
-)
-SELECT 
-    c.customer_id,
-    c.first_name,
-    ot.total_amount
-FROM 
-    customers c
-JOIN 
-    OrderTotals ot ON c.customer_id = ot.customer_id;
+IF EXISTS (SELECT 1 FROM customers WHERE customer_id = 1)
+BEGIN
+    PRINT 'Customer exists';
+END;
 ```
-
 - **Bad Example**
 
 ```
-SELECT 
-    c.customer_id,
-    c.first_name,
-    (
-        SELECT 
-            SUM(o.order_amount)
-        FROM 
-            orders o
-        WHERE 
-            o.customer_id = c.customer_id
-    ) AS total_amount
-FROM 
-    customers c;
+IF (SELECT COUNT(*) FROM customers WHERE customer_id = 1) > 0
+BEGIN
+    PRINT 'Customer exists';
+END;
 ```
 
 ## 9. Use Comments for Complex Logic
