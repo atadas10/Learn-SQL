@@ -1,20 +1,14 @@
-# Mastering SQL and Data Engineering
+<h1 align="center" style="color:green; font-weight: bold;"> Mastering SQL and Data Engineering <h1>
 
 ## Your Ultimate Guide to SQL Best Practices, Advanced Techniques, and Data Engineering Insights
-
----
 
 ### About Me
 
 Hi, I'm Atanu Das, a Cloud Data Architect. I help businesses design data solutions for robust, data-driven decision-making. With my expertise in SQL and data engineering, I aim to share valuable insights, techniques, and best practices with you.
 
----
-
 ### Purpose of the Blog
 
 Here you will find a wealth of information on SQL and its applications in data engineering. Whether you're a beginner or an experienced professional, my goal is to provide you with practical knowledge and tools to enhance your skills and improve your projects.
-
----
 
 ### Main Sections
 
@@ -59,13 +53,9 @@ Here you will find a wealth of information on SQL and its applications in data e
 - **Security and Compliance**
 - **Collaborating with Teams**
 
----
-
 ### Call to Action
 
 - **Follow on Social Media:** Connect with me on [LinkedIn](#), [Twitter](#), and [GitHub](#).
 - **Contact:** Have questions or suggestions? Feel free to reach out to me at [www.atanuconsulting.in](https://www.atanuconsulting.in)
-
----
 
 &copy; 2024 Atanu Consulting. All rights reserved.
