@@ -1,0 +1,60 @@
+title: SQL for Data Related Works
+logo-img: favicon.png
+author:
+  name: Atanu Das
+  url: "https://www.atanuconsulting.in"
+
+# The `>` after `description:` means to ignore line-breaks until next key.
+# If you want to omit the line-break after the end of text, use `>-` instead.
+description: >
+  This repository hosts comprehensive data modeling solutions. Explore efficient schemas,
+  normalization techniques, and optimization strategies to enhance data integrity and performance.
+  Ideal for data engineers, analysts, and enthusiasts seeking robust modeling practices.
+
+# Build settings
+
+# If you clone the Minima repo and build locally, use this setting.
+remote_theme: jekyll/minima
+#theme: minima
+
+# As of November 2023, GitHub Pages still uses Minima 2.5.1 (https://pages.github.com/versions/). 
+# If you want to use the latest Minima version on GitHub Pages, use the following setting and 
+# add a line comment on "theme: minima" above.
+#remote_theme: jekyll/minima
+
+# Theme-specific settings
+
+# If you want to link only specific pages in your header, use this and add the path to the pages
+# in order as they should show up.
+header_pages:
+  - topic.md
+
+# Set to `true` to show excerpts on the homepage.
+#show_excerpts: false
+
+plugins:
+   - jekyll-feed
+   - jekyll-seo-tag
+# Minima specific settings, which are only available from Minima 3.0 onward.
+minima:
+  # Minima skin selection.
+  # Available skins are:
+  # classic	           Default, light color scheme.
+  # dark	             Dark variant of the classic skin.
+  # auto	             Adaptive skin based on the default classic and dark skins.
+  # solarized-light	   Light variant of solarized color scheme.
+  # solarized-dark	   Dark variant of solarized color scheme.
+  # solarized	         Adaptive skin for solarized color scheme skins.
+  skin: classic
+  
+  # Minima date format.
+  # The default value is "%b %d, %Y" (e.g. Nov 14, 2023) 
+  # Refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this.
+  #date_format: "%b-%d-%Y"
+
+  # Generate social links in footer.
+  social_links:
+    - { platform: linkedin,       user_url: "https://www.linkedin.com/in/dasatanu10/" }
+    - { platform: facebook,       user_url: "https://www.facebook.com/dasatanu10/" }
+    - { platform: github,         user_url: "https://github.com/atadas10" }
+    - { platform: instagram,      user_url: "https://www.instagram.com/atanuphotography__" }
