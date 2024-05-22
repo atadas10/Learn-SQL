@@ -355,6 +355,28 @@ WHERE total > 100;
   Snowsight, Snowflake’s built-in analytics interface, provides powerful tools for analyzing query performance and getting insights from executed queries. By   using Snowsight, you can easily filter columns, view execution details, and optimize your queries based on past performance.
 
 - **Example**
-  - Filter Columns
-  - Distinct Values
-  - Population Percentages
+  - **Filter Columns**
+
+    "If you've already retrieved the data and wish to further filter columns, utilize Snowsight. This eliminates the need to execute an additional query."
+
+<p align="center">
+	<img src="https://github.com/atadas10/Learn-SQL/assets/84840069/86e6b785-133e-4843-a908-942e527da542">
+</p>
+
+  - **Data Insights**
+
+    Use Snowsight to gain insights from previously retrieved columns. This strategy will help decrease the cost associated with executing additional queries.
+
+<p align="center">
+	<img src="https://github.com/atadas10/Learn-SQL/assets/84840069/26effb80-1fcc-4ba8-961f-58d084741b56">
+</p>
+
+  - **Table Sample**
+
+    Utilize the TABLESAMPLE/SAMPLE function when you need to extract a data sample from the table for analysis. This method enhances the probability of identifying data gaps beyond the set limit 'n'.
+
+<p align="center">
+	<img src="https://github.com/atadas10/Learn-SQL/assets/84840069/71256d4d-b208-41a4-89d2-7df7e00eae2e">
+</p>
+
+    
