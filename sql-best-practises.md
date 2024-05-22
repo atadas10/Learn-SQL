@@ -275,6 +275,9 @@ END;
 - **Best Practice**
 
   Add comments to your SQL code to explain complex logic or any non-obvious parts of the query.
+  
+- **Example**
+
 ```
 - Calculate the total order amount for each customer
 WITH OrderTotals AS (
