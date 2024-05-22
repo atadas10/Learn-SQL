@@ -48,7 +48,7 @@ Here you will find a wealth of information on SQL and its applications in data e
 - **Project-Based Learning**
 - **Practical Examples and Case Studies**
 
-#### 8. Best Practices
+#### 8. [Best Practices](sql-best-practises.md)
 - **Code Quality and Maintainability**
 - **Security and Compliance**
 - **Collaborating with Teams**
