@@ -31,6 +31,7 @@ ORDER BY
 SELECT customer_id, first_name, last_name FROM customers WHERE active = 1 ORDER BY last_name;
 ```
 
+
 > **Snowflake Tip:** This will maintain the consistency of the query text and utilize the query result when available, thereby minimizing computational costs.
 
 
@@ -310,7 +311,7 @@ JOIN
 
   Optimizing query performance and managing compute costs effectively in Snowflake can significantly enhance the efficiency of your data operations. Below are some best practices to help you achieve these goals:
 
-##1. Use LIMIT Clause to Restrict Result Volume
+## 1. Use LIMIT Clause to Restrict Result Volume
 
 - **Best Practice**
   
@@ -325,7 +326,7 @@ WHERE condition = 'value'
 LIMIT 100;
 ```
 
-# 2. Use Temp Table Creation to Materialize a Complex Query Output
+## 2. Use Temp Table Creation to Materialize a Complex Query Output
 
 - **Best Practice**
   For complex queries involving multiple joins, aggregations, or sub-queries, creating a temporary table to store intermediate results can improve performance. This approach allows you to break down complex queries into simpler, more manageable steps and reuse the intermediate results efficiently.
@@ -346,7 +347,7 @@ FROM temp_results
 WHERE total > 100;
 ```
 
-# 3. Use Snowsight to Filter Columns and Get Insights from Already Executed Queries
+## 3. Use Snowsight to Filter Columns and Get Insights from Already Executed Queries
 
 - **Best Practice**
   
