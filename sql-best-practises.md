@@ -1,4 +1,4 @@
-<h1 align="center" style="color:blue; font-weight: bold;">SQL Best Practice </h1>
+<h1 align="center" style="color:blue; font-weight: bold;">SQL Best Practices </h1>
 
 ## Overview
   Writing efficient and readable SQL queries is crucial for database performance and maintainability. Adhering to **Best Practice**
@@ -296,6 +296,3 @@ FROM
 JOIN 
     OrderTotals ot ON c.customer_id = ot.customer_id;
 ```
-
-#
-&copy; 2024 Atanu Consulting. All rights reserved.

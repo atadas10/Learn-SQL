@@ -6,10 +6,11 @@ author:
 
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
-description: >
-  This repository hosts comprehensive data modeling solutions. Explore efficient schemas,
-  normalization techniques, and optimization strategies to enhance data integrity and performance.
-  Ideal for data engineers, analysts, and enthusiasts seeking robust modeling practices.
+description: >  
+  This repository offers a complete guide to SQL, covering everything from the basics to advanced topics
+  tailored for data engineering. Dive into foundational concepts, best practices, and advanced SQL techniques
+  to optimize your database interactions. Ideal for data engineers, analysts, and enthusiasts aiming to master
+  SQL and enhance their data management skills.
 
 # Build settings
 
