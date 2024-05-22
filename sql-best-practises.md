@@ -30,6 +30,9 @@ ORDER BY
 ```
 SELECT customer_id, first_name, last_name FROM customers WHERE active = 1 ORDER BY last_name;
 ```
+#
+> **Snowflake Tip:** This will maintain the consistency of the query text and utilize the query result when available, thereby minimizing computational costs.
+#
 
 ## 2. Select Column List Over SELECT *
 
@@ -53,6 +56,11 @@ FROM
 ```
 SELECT * FROM customers;
 ```
+
+#
+> **Snowflake Tip:** This approach allows Snowflake to scan only the necessary data, reducing computational load and potentially cost.
+#
+
 ## 3. CTE Over Sub-query
 
 - **Best Practice**
