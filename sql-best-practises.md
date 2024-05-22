@@ -1,9 +1,9 @@
 <h1 align="center" style="color:blue; font-weight: bold;">SQL Best Practices </h1>
 
 ## Overview
-  Writing efficient and readable SQL queries is crucial for database performance and maintainability. Adhering to **Best Practice**
-s can greatly enhance the efficiency, readability, and scalability of your SQL code. Below are several key SQL **Best Practice**
-s,along with examples, to guide you in writing optimal SQL queries.
+Writing efficient and readable SQL queries is crucial for database performance and maintainability. Adhering to **Best Practices**
+can greatly enhance the efficiency, readability, and scalability of your SQL code. Below are several key SQL **Best Practices**
+, along with examples, to guide you in writing optimal SQL queries.
 
 ## 1. SQL Syntax
 
@@ -299,3 +299,54 @@ FROM
 JOIN 
     OrderTotals ot ON c.customer_id = ot.customer_id;
 ```
+
+# Snowflake Specific Query Performance and Compute Cost Optimization Tips:
+
+  Optimizing query performance and managing compute costs effectively in Snowflake can significantly enhance the efficiency of your data operations. Below are some best practices to help you achieve these goals:
+
+##1. Use LIMIT Clause to Restrict Result Volume
+
+- **Best Practice**
+  
+  When working with large datasets, it's beneficial to use the LIMIT clause to restrict the number of rows returned by a query. This not only speeds up query execution but also reduces the amount of data transferred, leading to lower compute costs.
+
+- **Example**
+
+```
+-- Retrieve only the first 100 rows from the large_table
+SELECT * FROM large_table
+WHERE condition = 'value'
+LIMIT 100;
+```
+
+# 2. Use Temp Table Creation to Materialize a Complex Query Output
+
+- **Best Practice**
+  For complex queries involving multiple joins, aggregations, or sub-queries, creating a temporary table to store intermediate results can improve performance. This approach allows you to break down complex queries into simpler, more manageable steps and reuse the intermediate results efficiently.
+
+- **Example**
+
+```
+-- Create a temporary table to store the intermediate results
+CREATE TEMPORARY TABLE temp_results AS
+SELECT column1, SUM(column2) AS total
+FROM large_table
+WHERE condition = 'value'
+GROUP BY column1;
+
+-- Use the temporary table in subsequent queries
+SELECT column1, total
+FROM temp_results
+WHERE total > 100;
+```
+
+# 3. Use Snowsight to Filter Columns and Get Insights from Already Executed Queries
+
+- **Best Practice**
+  
+  Snowsight, Snowflake’s built-in analytics interface, provides powerful tools for analyzing query performance and getting insights from executed queries. By   using Snowsight, you can easily filter columns, view execution details, and optimize your queries based on past performance.
+
+- **Example**
+  - Filter Columns
+  - Distinct Values
+  - Population Percentages
