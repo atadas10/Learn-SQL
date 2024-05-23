@@ -5,7 +5,7 @@ Writing efficient and readable SQL queries is crucial for database performance a
 can greatly enhance the efficiency, readability, and scalability of your SQL code. Below are several key SQL **Best Practices**
 , along with examples, to guide you in writing optimal SQL queries.
 
-## 1. SQL Syntax
+## 1. SQL syntax
 
 - **Best Practice**
 
@@ -35,7 +35,7 @@ SELECT customer_id, first_name, last_name FROM customers WHERE active = 1 ORDER 
 > **Snowflake Tip:** This will maintain the consistency of the query text and utilize the query result when available, thereby minimizing computational costs.
 
 
-## 2. Select Column List Over SELECT *
+## 2. Select column list over SELECT *
 
 - **Best Practice**
 
@@ -60,7 +60,7 @@ SELECT * FROM customers;
 
 > **Snowflake Tip:** This approach allows Snowflake to scan only the necessary data, reducing computational load and potentially cost.
 
-## 3. CTE Over Sub-query
+## 3. CTE over sub-query
 
 - **Best Practice**
 
@@ -107,7 +107,7 @@ FROM
 ```
 
 
-## 4. Early Filter Where Possible
+## 4. Early filter where possible
 
 - **Best Practice**
 
@@ -152,7 +152,7 @@ WHERE
     o.order_date >= '2023-01-01';
 ```
 
-## 5. WHERE Clause Instead of HAVING
+## 5. WHERE clause instead of HAVING
 
 - **Best Practice**
 
@@ -190,7 +190,7 @@ AND
     COUNT(order_id) > 5;
 ```
 
-## 6. INNER JOIN Over LEFT/RIGHT JOIN
+## 6. INNER JOIN over LEFT/RIGHT JOIN
 
 - **Best Practice**
 
@@ -222,7 +222,7 @@ LEFT JOIN
     orders o ON c.customer_id = o.customer_id;
 ```
 
-## 7. Join on Index or Integer Column
+## 7. Join on index or integer column
 
 - **Best Practice**
 
@@ -254,7 +254,7 @@ JOIN
     customers c ON o.customer_email = c.customer_email;
 ```
 
-## 8. Use EXISTS() Instead of COUNT()
+## 8. Use EXISTS() instead of COUNT()
 
 - **Best Practice**
 
@@ -277,7 +277,7 @@ BEGIN
 END;
 ```
 
-## 9. Use Comments for Complex Logic
+## 9. Use comments for complex logic
 
 - **Best Practice**
 
@@ -307,7 +307,7 @@ JOIN
     OrderTotals ot ON c.customer_id = ot.customer_id;
 ```
 
-# Snowflake Specific Query Performance and Compute Cost Optimization Tips:
+# Snowflake specific query performance and compute cost optimization tips:
 
   Optimizing query performance and managing compute costs effectively in Snowflake can significantly enhance the efficiency of your data operations. Below are some best practices to help you achieve these goals:
 
@@ -326,7 +326,7 @@ WHERE condition = 'value'
 LIMIT 100;
 ```
 
-## 2. Use Temp Table Creation to Materialize a Complex Query Output
+## 2. Use temp table creation to materialize a complex query output
 
 - **Best Practice**
   For complex queries involving multiple joins, aggregations, or sub-queries, creating a temporary table to store intermediate results can improve performance. This approach allows you to break down complex queries into simpler, more manageable steps and reuse the intermediate results efficiently.
@@ -347,7 +347,7 @@ FROM temp_results
 WHERE total > 100;
 ```
 
-## 3. Use Snowsight to Filter Columns and Get Insights from Already Executed Queries
+## 3. Use Snowsight to filter columns and get insights from already executed queries
 
 - **Best Practice**
   
