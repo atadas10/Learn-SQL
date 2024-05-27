@@ -11,7 +11,7 @@ can greatly enhance the efficiency, readability, and scalability of your SQL cod
 
 Write clean, readable SQL by properly formatting your queries. Use consistent indentation, and meaningful aliases, and avoid unnecessary complexity.
 
-> **:snowflake: Tip:** This will maintain the consistency of the query text and utilize the query result when available, thereby minimizing computational costs.
+> **Snowflake Optimization:** This will maintain the consistency of the query text and utilize the query result when available, thereby minimizing computational costs.
 
 - **Good Example**
 
@@ -40,7 +40,7 @@ SELECT customer_id, first_name, last_name FROM customers WHERE active = 1 ORDER 
 
   Specify the columns you need in the SELECT statement instead of using SELECT *. This improves performance and readability.
 
-> **:snowflake: Tip:** This approach allows Snowflake to scan only the necessary data, reducing computational load and potentially cost.
+> **Snowflake Optimization:** This approach allows Snowflake to scan only the necessary data, reducing computational load and potentially cost.
 
 - **Good Example**
 
@@ -112,7 +112,7 @@ FROM
 
   Filter records as early as possible in the query to reduce the number of rows processed by subsequent operations.
 
-> **:snowflake: Tip:** This approach allows Snowflake to scan only the necessary data, reducing computational load and potentially cost.
+> **Snowflake Optimization:** This approach allows Snowflake to scan only the necessary data, reducing computational load and potentially cost.
 
 - **Good Example**
 
@@ -229,7 +229,7 @@ LEFT JOIN
 
   Join tables on indexed or integer columns to improve performance. Avoid joining on string columns or non-indexed columns.
 
-> **:snowflake: Tip:** Joining on an index or integer column in Snowflake reduce compute costs by speeding up query execution, optimizing storage usage, improving clustering efficiency, and enabling effective partitions pruning.
+> **Snowflake Optimization:** Joining on an index or integer column in Snowflake reduce compute costs by speeding up query execution, optimizing storage usage, improving clustering efficiency, and enabling effective partitions pruning.
 
 - **Good Example**
 
@@ -263,7 +263,7 @@ JOIN
 
   Use EXISTS for checking the existence of rows, which is generally faster than using COUNT(*).
 
-> **:snowflake: Tip:** This reduces Snowflake compute costs by quickly identifying the presence of records without scanning the entire dataset, thus improving query performance and efficiency.
+> **Snowflake Optimization:** This reduces Snowflake compute costs by quickly identifying the presence of records without scanning the entire dataset, thus improving query performance and efficiency.
 
 - **Good Example**
 
@@ -382,5 +382,3 @@ WHERE total > 100;
 <p align="center">
 	<img src="https://github.com/atadas10/Learn-SQL/assets/84840069/71256d4d-b208-41a4-89d2-7df7e00eae2e">
 </p>
-
-    
