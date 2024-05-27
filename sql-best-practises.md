@@ -11,6 +11,8 @@ can greatly enhance the efficiency, readability, and scalability of your SQL cod
 
 Write clean, readable SQL by properly formatting your queries. Use consistent indentation, and meaningful aliases, and avoid unnecessary complexity.
 
+> **:snowflake: Tip:** This will maintain the consistency of the query text and utilize the query result when available, thereby minimizing computational costs.
+
 - **Good Example**
 
 ```
@@ -32,14 +34,13 @@ SELECT customer_id, first_name, last_name FROM customers WHERE active = 1 ORDER 
 ```
 
 
-> **Snowflake Tip:** This will maintain the consistency of the query text and utilize the query result when available, thereby minimizing computational costs.
-
-
 ## 2. Select column list over SELECT *
 
 - **Best Practice**
 
   Specify the columns you need in the SELECT statement instead of using SELECT *. This improves performance and readability.
+
+> **:snowflake: Tip:** This approach allows Snowflake to scan only the necessary data, reducing computational load and potentially cost.
 
 - **Good Example**
 
@@ -57,8 +58,6 @@ FROM
 ```
 SELECT * FROM customers;
 ```
-
-> **Snowflake Tip:** This approach allows Snowflake to scan only the necessary data, reducing computational load and potentially cost.
 
 ## 3. CTE over sub-query
 
@@ -112,6 +111,8 @@ FROM
 - **Best Practice**
 
   Filter records as early as possible in the query to reduce the number of rows processed by subsequent operations.
+
+> **:snowflake: Tip:** This approach allows Snowflake to scan only the necessary data, reducing computational load and potentially cost.
 
 - **Good Example**
 
@@ -228,6 +229,8 @@ LEFT JOIN
 
   Join tables on indexed or integer columns to improve performance. Avoid joining on string columns or non-indexed columns.
 
+> **:snowflake: Tip:** Joining on an index or integer column in Snowflake reduce compute costs by speeding up query execution, optimizing storage usage, improving clustering efficiency, and enabling effective partitions pruning.
+
 - **Good Example**
 
 ```
@@ -259,6 +262,8 @@ JOIN
 - **Best Practice**
 
   Use EXISTS for checking the existence of rows, which is generally faster than using COUNT(*).
+
+> **:snowflake: Tip:** This reduces Snowflake compute costs by quickly identifying the presence of records without scanning the entire dataset, thus improving query performance and efficiency.
 
 - **Good Example**
 
