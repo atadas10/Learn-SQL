@@ -1,4 +1,4 @@
-# SQL Basics
+<h1 align="center" style="color:blue; font-weight: bold;">SQL Basics</h1>
 
 ## 1. Introduction to SQL
 
@@ -26,99 +26,99 @@ DML commands are used for managing data within schema objects. These commands al
 - **UPDATE**: Modify existing data within a table.
 - **DELETE**: Remove existing data from a table.
 
-#### 2.1.1. SELECT
+#### 2.1.1. SELECT:
 
 The `SELECT` statement is used to retrieve data from one or more tables.
 	
  ```
-	SELECT column1, column2, ...
-	FROM table_name;
+SELECT column1, column2, ...
+FROM table_name;
 ```
 
-#### 2.1.1. WHERE
+#### 2.1.1. WHERE:
 
 The WHERE clause is used to filter records that meet specific conditions.
 
 ```
-	SELECT column1, column2, ...
-	FROM table_name
-	WHERE condition;
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
 ```
 
-#### 2.1.1. JOIN
+#### 2.1.1. JOIN:
 
 SQL JOINs are used to combine rows from two or more tables based on a related column between them.
 
-##### 2.1.1.1. INNER JOIN
+##### 2.1.1.1. INNER JOIN:
 
 Returns records that have matching values in both tables.
 
 ```
-		SELECT a.column1, b.column2, ...
-		FROM table1 a
-		INNER JOIN table2 b
-		ON a.common_field = b.common_field;
+SELECT a.column1, b.column2, ...
+FROM table1 a
+INNER JOIN table2 b
+ON a.common_field = b.common_field;
 ```
 
-#### 2.1.1.2. LEFT JOIN
+#### 2.1.1.2. LEFT JOIN:
 
 Returns all records from the left table and the matched records from the right table.
 
 ```
-		SELECT a.column1, b.column2, ...
-		FROM table1 a
-		LEFT JOIN table2 b
-		ON a.common_field = b.common_field;
+SELECT a.column1, b.column2, ...
+FROM table1 a
+LEFT JOIN table2 b
+ON a.common_field = b.common_field;
 ```
 
-#### 2.1.1.3. RIGHT JOIN
+#### 2.1.1.3. RIGHT JOIN:
 
 Returns all records from the right table and the matched records from the left table.
 
 ```
-		SELECT a.column1, b.column2, ...
-		FROM table1 a
-		RIGHT JOIN table2 b
-		ON a.common_field = b.common_field;
+SELECT a.column1, b.column2, ...
+FROM table1 a
+RIGHT JOIN table2 b
+ON a.common_field = b.common_field;
 ```
 
-#### 2.1.1.4. FULL OUTER JOIN
+#### 2.1.1.4. FULL OUTER JOIN:
 
 Returns all records when there is a match in either left or right table.
 
 ```
-		SELECT a.column1, b.column2, ...
-		FROM table1 a
-		FULL OUTER JOIN table2 b
-		ON a.common_field = b.common_field;
+SELECT a.column1, b.column2, ...
+FROM table1 a
+FULL OUTER JOIN table2 b
+ON a.common_field = b.common_field;
 ```
 
-#### 2.1.1.5. INSERT
+#### 2.1.1.5. INSERT:
 
 The INSERT INTO statement is used to add new rows to a table.
 
 ```
-		INSERT INTO table_name (column1, column2, ...)
-		VALUES (value1, value2, ...);
+INSERT INTO table_name (column1, column2, ...)
+VALUES (value1, value2, ...);
 ```
 
-#### 2.1.1.6. UPDATE
+#### 2.1.1.6. UPDATE:
 
 The UPDATE statement is used to modify existing records in a table.
 
 ```
-		UPDATE table_name
-		SET column1 = value1, column2 = value2, ...
-		WHERE condition;
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
 ```
 
-#### 2.1.1.7. DELETE
+#### 2.1.1.7. DELETE:
 
 The DELETE statement is used to remove existing records from a table.
 
 ```
-		DELETE FROM table_name
-		WHERE condition;
+DELETE FROM table_name
+WHERE condition;
 ```
 
 ### 2.2. Data Definition Language (DDL)
@@ -134,11 +134,11 @@ DDL commands are used to define and modify the structure of database objects. Th
 Creates a new table or database.
 
 ```
-		CREATE TABLE table_name (
-			column1 datatype PRIMARY KEY,
-			column2 datatype,
-			...
-		);
+CREATE TABLE table_name (
+	column1 datatype PRIMARY KEY,
+	column2 datatype,
+	...
+);
 ```
 
 #### 2.2.2. ALTER
@@ -146,8 +146,8 @@ Creates a new table or database.
 Modifies an existing database object, such as a table.
 
 ```
-		ALTER TABLE table_name
-		ADD column_name datatype;
+ALTER TABLE table_name
+ADD column_name datatype;
 ```
 
 #### 2.2.3. DROP
@@ -155,7 +155,7 @@ Modifies an existing database object, such as a table.
 Deletes an existing database object, such as a table.
 
 ```
-		DROP TABLE table_name;
+DROP TABLE table_name;
 ```
 
 ### 2.3. Data Control Language (DCL)
@@ -165,10 +165,11 @@ DCL commands are used to control access to data within a database. These command
 - GRANT: Provide specific privileges to users or roles.
 		
 ```
-		GRANT SELECT, INSERT ON dim_product TO user_name;
+GRANT SELECT, INSERT ON dim_product TO user_name;
 ```
+
 - REVOKE: Remove specific privileges from users or roles.
 		
 ```
-		REVOKE SELECT, INSERT ON dim_product FROM user_name;
+REVOKE SELECT, INSERT ON dim_product FROM user_name;
 ```
