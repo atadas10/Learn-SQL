@@ -58,5 +58,5 @@ Here you will find a wealth of information on SQL and its applications in data e
 - **Follow on Social Media:** Connect with me on [LinkedIn](https://www.linkedin.com/in/dasatanu10/) and [GitHub](https://github.com/atadas10).
 - **Contact:** Have questions or suggestions? Feel free to reach out to me at [www.atanuconsulting.in](https://www.atanuconsulting.in)
 
-#
+
 &copy; 2024 Atanu Consulting. All rights reserved.
